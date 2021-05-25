@@ -7,6 +7,7 @@ public class Shopping {
     private String name;
     private Integer num;
     private String place;
+    //private Boolean isDone;
 
     public Shopping(){}
 
