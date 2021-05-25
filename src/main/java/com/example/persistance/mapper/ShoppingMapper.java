@@ -13,7 +13,8 @@ public interface ShoppingMapper {
 
     //全文検索
     @Select("SELECT s.id AS id, s.name AS name, s.num AS num, s.place AS place" +
-            " FROM shopping s")
+            " FROM shopping s" +
+            " ORDER BY s.place")
     List<Shopping> findAll();
 
     //削除

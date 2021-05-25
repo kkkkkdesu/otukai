@@ -15,6 +15,7 @@
             <th>商品</th>
             <th>個数</th>
             <th>場所</th>
+            <th>チェック</th>
         </tr>
         <!--/* TODO 買い物データを表示する */-->
         <tr th:each="shopping : ${shoppingList}" th:object="${shopping}">
@@ -22,6 +23,7 @@
             <td th:text="*{name}">りんご</td>
             <td th:text="*{num}">3</td>
             <td th:text="*{place}">スーパー</td>
+            <td><input type="checkbox" name="checkbox" value="a"></td>
         </tr>
         <!--/*-->
         <!--*/-->
