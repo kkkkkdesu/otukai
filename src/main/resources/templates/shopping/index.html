@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../static/css/style.css"
+          th:href="@{/css/style.css}">
+</head>
+<body>
+    <h1>買い物リスト</h1>
+    <a href="insertMain.html" th:href="@{insertMain}">新規追加へ</a>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>商品</th>
+            <th>個数</th>
+            <th>場所</th>
+        </tr>
+        <!--/* TODO 買い物データを表示する */-->
+        <tr th:each="shopping : ${shoppingList}" th:object="${shopping}">
+            <td th:text="*{id}">1</td>
+            <td th:text="*{name}">りんご</td>
+            <td th:text="*{num}">3</td>
+            <td th:text="*{place}">スーパー</td>
+        </tr>
+        <!--/*-->
+        <!--*/-->
+    </table>
+</body>
+</html>
